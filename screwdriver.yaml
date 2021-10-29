@@ -1,0 +1,17 @@
+shared:
+  image: node:14
+ 
+jobs:
+  job1:
+    requires: [ ~commit ]
+    sourcePaths:
+      - directory1/
+    steps:
+      - echo: echo "this is build1"
+
+  job2:
+    requires: [ ~commit ]
+    sourcePaths:
+      - directory2/
+    steps:
+      - echo: echo "this is build2"
